@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_padding">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/normal_padding"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/mag_units"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rec_background"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="5.65" />
+
+                <TextView
+                    android:id="@+id/offset_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/inner_margin"
+
+                    android:fontFamily="sans-serif-light"
+                    android:paddingStart="@dimen/normal_padding"
+                    android:paddingEnd="@dimen/normal_padding"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    app:layout_constraintStart_toEndOf="@+id/mag_units"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="36 km WNW of " />
+
+                <TextView
+                    android:id="@+id/primary_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/inner_margin"
+                    android:layout_marginEnd="@dimen/inner_margin"
+                    android:drawableEnd="@drawable/ic_location_pin_"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/min_padding"
+                    android:paddingBottom="@dimen/normal_padding"
+                    android:paddingEnd="@dimen/normal_padding"
+                    android:paddingStart="@dimen/normal_padding"
+                    android:layout_marginTop="2dp"
+                    android:scaleType="centerCrop"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/mag_units"
+                    app:layout_constraintEnd_toStartOf="@+id/time"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/mag_units"
+                    app:layout_constraintTop_toBottomOf="@+id/offset_location"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text=" Sola, Vanuatu " />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="june 26  2016 " />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date"
+                    tools:text="4.17 AM " />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        style="@style/Widget.Material3.MaterialDivider"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EQInfo</string>
+
+    <string name="map_indicator">Find on map</string>
+    <string name="details_title">Details</string>
+    <string name="location_title">Location</string>
+    <string name="date_title">Date</string>
+    <string name="magnitude">Magnitude : %.0f</string>
+    <string name="no_place">Not defined</string>
+    <string name="no_place_primary">click to view map</string>
+
+    <string name="about">EQInfo allows you to track earthquake using information provided by USGS, You can also find the earthquake location using USGS maps</string>
+</resources>
